@@ -11,7 +11,9 @@ body{
   align-items: center;
   height: 100vh;
 }
-
+.navv{
+  margin-left: 1000px;
+}
 /* Row styling */
 .row {
   width: 100%;
@@ -41,6 +43,7 @@ body{
 /* Text alignment */
 .text-center {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 /* Button container styling */
@@ -117,6 +120,7 @@ body{
 
 /* Font size for term and definition */
 .front .card-text {
+  padding-top: 30px;
   font-size: 2em;
   text-align: center;
 }
@@ -129,34 +133,49 @@ body{
 @media (max-width: 768px) {
   .container-full-height {
     height: 700px;
+    width: 450px;
+    margin-top: -50px;
   }
-
+ 
+h1{
+  padding-top: 50px;
+  margin-right: 60px;
+}
+h4{
+  margin-right: 60px;
+  margin-top: -10px;
+}
   .flashcard-container {
     max-width: 100%; /* Make sure flashcard container fits within mobile screens */
     margin: 0 auto; /* Center align */
   }
 
   .flashcard {
-    width: 500px; /* Ensure flashcard width fits mobile screens */
+    width: 800px; /* Ensure flashcard width fits mobile screens */
     height: 200px; /* Adjust height automatically */
   }
 
   .navbar {
-    padding: 10px 5px; /* Adjust padding for mobile */
+    padding: 18px 5px; /* Adjust padding for mobile */
+    margin-left: 30px;
+    width: 420px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
   }
-
+.navv{
+  width: 150px;
+  margin-left: -700px;
+}
   .btn-container {
     flex-direction: row; /* Stack buttons vertically on small screens */
-   
-  margin-left: -300px;
-
-    
+    margin-left: -220px;  
     /* Center align buttons */
   }
 
   .btn {
     width: 100%; /* Full width buttons */
-    padding: 10px; /* Adjust padding for mobile */
+    padding: 6px; /* Adjust padding for mobile */
     margin: 5px 0;
    /* Adjust margins */
   }
