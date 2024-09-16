@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FlashcardList from './FlashcardList';
 import { Container, Navbar, Nav, Form, FormControl, Row, Col } from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Updated imports
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Updated imports
 import './style.css';
 import './App.css';
 
@@ -36,11 +36,15 @@ function App() {
                 <option value="Agile Tools & Techniques">Agile Tools & Techniques</option>
               </FormControl>
             </Form>
+            {/* Add a login link in the navbar */}
+            <Nav.Link as={Link} to="/login" className="ml-4">
+              Login
+            </Nav.Link>
           </Nav>
         </Navbar>
 
         <Routes>
-          <Route path="/login" element={<Login />} /> {/* Add route for the Login component */}
+          <Route path="/login" element={<Login />} /> {/* Route for the Login component */}
           <Route path="/" element={
             <Row className="justify-content-center mt-6 vh-100">
               <Col md={8}>
