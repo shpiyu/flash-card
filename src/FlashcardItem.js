@@ -9,7 +9,7 @@ const FlashcardItem = ({ serialNumber, question, answer, flipped, toggleFlip }) 
       <div className={`flashcard ${flipped ? 'flipped' : ''}`}>
         <div className="front cards">
           <div className="card-title"></div>
-          <div className="card-text">{`Q${serialNumber}.${question}`}</div>
+          <div className="card-text">{`${serialNumber}.  ${question}`}</div>
         </div>
         <div className="back cards">
           
