@@ -1,0 +1,139 @@
+/* FlashcardList.css */
+
+.container-full-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .col {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  
+  .col-md-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .btn-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .btn {
+    padding: 20px 50px;
+    border: none;
+    color: white;
+    background-color: #009dff;
+    cursor: pointer;
+  }
+  
+  .btn-know {
+    background-color: green;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .btn-dont-know {
+    background-color: red;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .btn-prev-next {
+    background-color: rgb(71, 72, 172);
+    color: white;
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .margin-top-20 {
+    margin-top: 20px;
+    position: absolute;
+    top: 200px;
+  }
+  
+  @media (max-width: 576px) {
+    .btn-container {
+      gap: 10px;
+    }
+  
+    .col-md-8,
+    .col-lg-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .margin-top-20 {
+      margin-top: 100px;
+    }
+  }
+  
+  .front .card-text {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .back .card-text {
+    font-size: 20px;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .flashcard-item {
+      height: auto; /* Adjust height for mobile */
+    }
+  
+    .btn-container {
+      flex-direction: column; /* Stack buttons vertically on small screens */
+      align-items: center; /* Center align buttons */
+    }
+  
+    .btn {
+      width: 100%; /* Full width buttons */
+      padding: 10px; /* Adjust padding for mobile */
+      margin: 5px 0; /* Adjust margins */
+    }
+  
+    .flashcard-wrapper {
+      flex-direction: column; /* Stack items vertically on mobile */
+    }
+  
+    .flashcard-buttons {
+      margin-top: 10px; /* Adjust margin */
+    }
+  } 
+  
