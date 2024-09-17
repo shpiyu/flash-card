@@ -1,7 +1,5 @@
-
-import React, { useState } from 'react';
+import React from 'react'; // Removed `useState` import
 import './FlashcardItem.css';  // Assuming you have a CSS file for styling
-
 
 const FlashcardItem = ({ serialNumber, question, answer, flipped, toggleFlip }) => {
   return (
@@ -12,7 +10,6 @@ const FlashcardItem = ({ serialNumber, question, answer, flipped, toggleFlip }) 
           <div className="card-text">{`${serialNumber}.  ${question}`}</div>
         </div>
         <div className="back cards">
-          
           <div className="card-title"></div> 
           <div className="card-text">{answer}</div> 
         </div>
@@ -20,4 +17,5 @@ const FlashcardItem = ({ serialNumber, question, answer, flipped, toggleFlip }) 
     </div>
   );
 };
+
 export default FlashcardItem;
