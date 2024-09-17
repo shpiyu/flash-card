@@ -74,4 +74,12 @@ button.navbar-toggler + .navbar-collapse {
 h1{
   font-family: Calibri;
   font-weight: 600;
+  margin-top: 100px;
+  margin-left: 60px;
+}
+h4{
+  font-family: Calibri;
+  font-weight: 500;
+  margin-top: 30px;
+ margin-left: 70px;
 }

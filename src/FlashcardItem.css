@@ -127,13 +127,15 @@
 }
 
 .btn-container {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
-
+  
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
 }
+
+
 
 .btn {
   padding: 20px 50px;

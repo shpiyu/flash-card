@@ -1,5 +1,4 @@
-/* FlashcardList.css */
-
+/* Container styles for full height and centering content */
 .container-full-height {
   display: flex;
   flex-direction: column;
@@ -8,6 +7,7 @@
   height: 100vh;
 }
 
+/* Row and column styling for center alignment */
 .row {
   width: 100%;
   display: flex;
@@ -36,103 +36,65 @@
   text-align: center;
 }
 
+/* Button container for proper alignment and spacing */
 .btn-container {
   display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   gap: 16px;
   align-items: center;
   margin-top: 20px;
+  justify-content: center; /* Center buttons horizontally */
   width: 100%;
 }
 
+/* General button styling */
 .btn {
-  padding: 20px 50px;
+  padding: 12px 24px; /* Adjusted padding for better fit */
   border: none;
   color: white;
-  background-color: #009dff;
   cursor: pointer;
+  border-radius: 5px; /* Rounded corners for buttons */
+  font-size: 1em; /* Consistent font size */
 }
 
+/* Styling for 'Know' button */
 .btn-know {
   background-color: green;
-  padding: 10px 20px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
 }
 
+/* Styling for 'Don't Know' button */
 .btn-dont-know {
   background-color: red;
-  padding: 10px 20px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
 }
 
+/* Styling for 'Previous' and 'Next' buttons */
 .btn-prev-next {
   background-color: rgb(71, 72, 172);
-  color: white;
-  margin: 5px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
 }
 
+/* Margin-top for score display */
 .margin-top-20 {
   margin-top: 20px;
-  position: absolute;
-  top: 200px;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 576px) {
   .btn-container {
-    gap: 10px;
+    gap: 10px; /* Reduced gap on smaller screens */
   }
 
-  .col-md-8,
-  .col-lg-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .margin-top-20 {
-    margin-top: 100px;
+  .btn {
+    width: 100%; /* Full width buttons on small screens */
+    padding: 10px; /* Reduced padding on small screens */
   }
 }
 
-.front .card-text {
-  font-size: 2em;
-  text-align: center;
-}
-
-.back .card-text {
-  font-size: 20px;
-  text-align: center;
-}
 @media (max-width: 768px) {
   .flashcard-item {
     height: auto; /* Adjust height for mobile */
   }
 
   .btn-container {
-    flex-direction: column; /* Stack buttons vertically on small screens */
-    align-items: center; /* Center align buttons */
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
   }
-
-  .btn {
-    width: 100%; /* Full width buttons */
-    padding: 30px;/* Adjust padding for mobile */
-    margin: 5px 0; /* Adjust margins */
-  }
-
-  .flashcard-wrapper {
-    flex-direction: column; /* Stack items vertically on mobile */
-  }
-
-  .flashcard-buttons {
-    margin-top: 10px; /* Adjust margin */
-  }
-} 
+}
