@@ -250,4 +250,24 @@ body {
     width: 80%; /* Adjust width for smaller screens */
   }
 }
+@media (min-width: 768px) and (max-width: 834px) {
+  /* Target iPad Mini specifically */
+  .flashcard-container {
+    min-height: 450px; /* Adjust this value as needed */
+    max-height: none;  /* Ensure no clipping of content */
+    padding-bottom: 20px; /* Add some padding to prevent overlap with buttons */
+  }
+
+  .flashcard {
+    height: 100%; /* Allow the flashcard to adjust based on content */
+  }
+
+  h4 {
+    margin-bottom: 30px; /* Ensure space between header and flashcard */
+  }
+
+  .btn-container {
+    margin-top: 20px; /* Maintain gap above buttons */
+  }
+}
 

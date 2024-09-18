@@ -207,3 +207,9 @@ h4 {
     display: none; /* Hide the hamburger icon */
   }
 }
+@media (min-width: 768px) and (max-width: 834px) {
+  /* Target iPad Mini specifically */
+  .flashcard-container {
+    height: 500px; /* Increase the height as needed for the flashcard content */
+  }
+}
