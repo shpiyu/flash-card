@@ -71,15 +71,45 @@ button.navbar-toggler + .navbar-collapse {
 .flashcard-buttons {
   margin-top: 0.5rem; /* Adjust the spacing between the flashcard and buttons */
 }
-h1{
-  font-family: Calibri;
-  font-weight: 600;
-  margin-top: 100px;
-  margin-left: 60px;
+/* Centered h1 and h4 */
+h1, h4 {
+  text-align: center;
+  margin: 0; /* Remove any margin for clean centering */
 }
-h4{
-  font-family: Calibri;
-  font-weight: 500;
-  margin-top: 30px;
- margin-left: 70px;
+
+/* Custom margin between h1 and h4 */
+h4 {
+  margin-top: 10px; /* Adjust this value to control space between h1 and h4 */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 576px) {
+  .container-full-height {
+    padding-top: 50px; /* Less padding on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Adjust font size for mobile screens */
+  }
+
+  h4 {
+    font-size: 1.2em;
+    margin-top: 5px; /* Smaller space between h1 and h4 for mobile */
+  }
+}
+
+/* Tablet view adjustments */
+@media (min-width: 577px) and (max-width: 768px) {
+  .container-full-height {
+    padding-top: 60px; /* Adjust padding for tablet */
+  }
+
+  h1 {
+    font-size: 2em; /* Adjust font size for tablet screens */
+  }
+
+  h4 {
+    font-size: 1.5em;
+    margin-top: 10px; /* Adjust space between h1 and h4 */
+  }
 }
