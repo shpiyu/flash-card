@@ -75,6 +75,7 @@ button.navbar-toggler + .navbar-collapse {
 h1, h4 {
   text-align: center;
   margin: 0; /* Remove any margin for clean centering */
+  font-style: calibri;
 }
 
 /* Custom margin between h1 and h4 */
@@ -90,11 +91,13 @@ h4 {
 
   h1 {
     font-size: 1.5em; /* Adjust font size for mobile screens */
+    font-style: calibri;
   }
 
   h4 {
     font-size: 1.2em;
     margin-top: 5px; /* Smaller space between h1 and h4 for mobile */
+    font-style: calibri;
   }
 }
 
@@ -106,10 +109,101 @@ h4 {
 
   h1 {
     font-size: 2em; /* Adjust font size for tablet screens */
+    font-style: calibri;
   }
 
   h4 {
     font-size: 1.5em;
     margin-top: 10px; /* Adjust space between h1 and h4 */
+    font-style: calibri;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: none; /* Hide hamburger icon */
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .navbar-nav .form-inline {
+    display: flex;
+    justify-content: center; /* Center align content */
+    width: 100%; /* Full width for the button */
+  }
+  
+  /* Make sure other navbar items are hidden */
+  .navbar-nav .nav-item:not(.select-category) {
+    display: none; /* Hide all items except "Select Category" */
+  }
+  
+  /* Ensure the "Select Category" button is visible and centered */
+  .select-category {
+    display: block; /* Ensure it is displayed */
+    width: 100%; /* Full width to fit the screen */
+    text-align: center; /* Center text inside the button */
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Keep items in a row */
+  }
+  
+  .navbar-toggler {
+    display: block; /* Show the toggler button on mobile */
+  }
+
+  .navbar-nav {
+    justify-content: flex-end; /* Align items to the right for mobile view */
+    flex-direction: row; /* Keep items in a row */
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block; /* Ensure items are displayed in a row */
+  }
+}
+
+/* Tablet view adjustments */
+@media (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* Adjust padding for tablets */
+  }
+}@media (max-width: 576px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+/* Mobile and Tablet View Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Align "Flashcard" to the left and "Select Category" to the right */
+    align-items: center; /* Vertically center the items */
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row; /* Keep items in a row */
+    justify-content: space-between;
+    width: 100%; /* Ensure full width usage */
+  }
+
+  .navbar-brand {
+    margin-right: auto; /* Push "Flashcard" to the left side */
+  }
+
+  .select-category {
+    margin-left: auto; /* Push "Select Category" to the right side */
+    display: inline-block;
+  }
+
+  .navbar-toggler {
+    display: none; /* Hide the hamburger icon */
   }
 }

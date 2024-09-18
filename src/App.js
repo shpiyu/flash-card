@@ -18,7 +18,7 @@ function App() {
         <Navbar bg="light" expand="lg">
           <Navbar.Brand className='header-name' href="#">Flashcard</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav"> 
             <Nav className="ml-auto navv">
               <Form inline>
                 <FormControl as="select" value={category} onChange={handleCategoryChange} className="mr-sm-2">

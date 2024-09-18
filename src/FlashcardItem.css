@@ -1,5 +1,5 @@
 * {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'calibri', 'calibri', Calibri, 'calibri', calibri;
 }
 
 .flashcard-container {
@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 10px; /* Add padding to ensure content is not touching the edges */
 }
 
 .flashcard {
@@ -19,6 +20,9 @@
   transition: transform 0.3s;
   transform-style: preserve-3d;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flashcard.flipped {
@@ -37,6 +41,8 @@
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   padding: 20px;
 }
 
@@ -50,7 +56,7 @@
 }
 
 .card-text {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -105,6 +111,7 @@
     width: 40px;
   }
 }
+
 /* For screens smaller than 576px (mobile view) */
 @media (max-width: 576px) {
   .flashcard-container {
@@ -125,3 +132,5 @@
     max-width: 80%; /* Slightly reduce the width for tablets */
   }
 }
+
+

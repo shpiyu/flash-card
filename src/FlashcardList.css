@@ -123,3 +123,8 @@
   border-radius: 5px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: none; /* Hide the toggler icon */
+  }
+}
