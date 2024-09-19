@@ -133,4 +133,46 @@
   }
 }
 
+/* Mobile Landscape View Adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .flashcard-container {
+    width: 100%; /* Use full width for landscape */
+    height: auto;
+    margin-top: 10px; /* Ensure there's no negative margin causing overlap */
+    padding: 10px;
+  }
 
+  .flashcard {
+    width: 100%; /* Keep the flashcard width responsive */
+    height: auto; /* Adjust height based on content */
+  }
+
+  .card-title {
+    font-size: 1.3em; /* Adjust font size for readability in landscape */
+  }
+
+  .card-text {
+    font-size: 1.2em; /* Adjust card text size for landscape */
+  }
+
+  .card-img {
+    width: 60px; /* Scale down image size */
+  }
+}
+
+/* Remove hover and opacity effects for buttons */
+.btn, .btn-know, .btn-dont-know, .btn-prev-next {
+  transition: none; /* Remove any transition effects */
+  background-color: inherit; /* Ensure no color change on hover or active */
+  opacity: 5; /* Ensure opacity remains unchanged */
+}
+
+.btn:hover, .btn-know:hover, .btn-dont-know:hover, .btn-prev-next:hover {
+  background-color: inherit; /* No change in color on hover */
+  opacity: 5; /* Ensure opacity remains unchanged */
+}
+
+.btn:active, .btn-know:active, .btn-dont-know:active, .btn-prev-next:active {
+  background-color: inherit; /* No change in color when button is clicked */
+  opacity: 5; /* Ensure opacity remains unchanged */
+}

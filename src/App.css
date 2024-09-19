@@ -66,44 +66,72 @@ body {
   width: 150px; /* Fixed width for all buttons */
   text-align: center; /* Center text within button */
   padding: 10px; /* Adjust padding to fit text properly */
+  transition: none; /* Remove any transition effects */
 }
 
 /* Default button styling */
 .btn {
   padding: 20px 50px;
   border: none;
-  color: white;
+  color: black;
   background-color: #009dff;
-  cursor: pointer;
+  
 }
 
 .btn-know {
-  background-color: green;
+  background-color: rgb(120, 232, 120);
   padding: 10px 20px;
   border: none;
-  color: white;
-  cursor: pointer;
+  color: black;
+  
   text-align: center;
   white-space: nowrap;
 }
 
 .btn-dont-know {
-  background-color: red;
+  background-color: #eb7272;
   padding: 10px 20px;
   border: none;
-  color: white;
-  cursor: pointer;
+  color: #161515;
+  
   text-align: center;
   white-space: nowrap;
 }
 
 .btn-prev-next {
-  background-color: rgb(71, 72, 172);
-  color: white;
+  background-color: #a4a5f4;
+  color: black;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   margin-left: 5px;
+}
+
+/* Remove hover and opacity effects for buttons */
+.btn:hover, .btn-know:hover, .btn-dont-know:hover, .btn-prev-next:hover {
+  background-color: #009dff; /* No change in color on hover */
+  opacity: 1; /* Ensure opacity remains unchanged */
+}
+
+/* Remove hover and opacity effects for buttons */
+ .btn-prev-next:hover {
+  background-color: #4748ac; /* No change in color on hover */
+  opacity: 1; /* Ensure opacity remains unchanged */
+}
+.btn-know:hover {
+  background-color: green; /* No change in color on hover */
+  opacity: 1; /* Ensure opacity remains unchanged */
+}
+.btn-dont-know:hover {
+  background-color: red; /* No change in color on hover */
+  opacity: 1; /* Ensure opacity remains unchanged */
+}
+
+
+.btn:active, .btn-know:active, .btn-dont-know:active, .btn-prev-next:active 
+{
+  background-color: #6062db; /* No change in color when button is clicked */
+  opacity: 1; /* Ensure opacity remains unchanged */
 }
 
 /* Margin top */
@@ -196,6 +224,7 @@ body {
     margin-top: 30px; /* Increase space to ensure flashcard is below headers */
   }
 }
+
 /* Popup Overlay */
 .popup-overlay {
   position: fixed;
@@ -250,6 +279,7 @@ body {
     width: 80%; /* Adjust width for smaller screens */
   }
 }
+
 @media (min-width: 768px) and (max-width: 834px) {
   /* Target iPad Mini specifically */
   .flashcard-container {
@@ -271,3 +301,42 @@ body {
   }
 }
 
+/* Button container styling */
+.button-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  gap: 16px; /* Add some spacing between elements */
+}
+
+/* Shift h4 below button container */
+h4 {
+  margin-top: 20px; /* Add margin to separate it from the buttons */
+  display: block; /* Ensure it is a block element and below the buttons */
+  text-align: center;
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  h1, h4 {
+    margin-top: 20px; /* Ensure space between h1 and h4 to avoid overlap */
+    margin-bottom: 15px; /* Add space below headers */
+    font-size: 1.5em; /* Adjust font size for better visibility in landscape */
+  }
+
+  .container-full-height {
+    height: auto;
+    padding: 10px; /* Adjust padding to fit smaller landscape height */
+    margin-top: 0; /* Remove any top margin to prevent overlap */
+  }
+
+  .flashcard-container {
+    margin-top: 20px; /* Ensure space between flashcards and header */
+    padding: 15px; /* Adjust padding for better fit */
+    width: 90%; /* Reduce width to fit landscape view */
+  }
+
+  .flashcard {
+    height: auto; /* Allow flashcard height to adjust based on content */
+  }
+}

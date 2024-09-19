@@ -213,3 +213,19 @@ h4 {
     height: 500px; /* Increase the height as needed for the flashcard content */
   }
 }
+/* Button container styling */
+.button-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  gap: 16px; /* Add some spacing between elements */
+}
+
+/* Shift h4 below button container */
+h4 {
+  margin-top: 20px; /* Add margin to separate it from the buttons */
+  display: block; /* Ensure it is a block element and below the buttons */
+  text-align: center;
+}
