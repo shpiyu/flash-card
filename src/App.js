@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
-import FlashcardList from './FlashcardList'; // Importing the FlashcardList component
-import { Container, Navbar, Nav, Form, FormControl, Row, Col } from 'react-bootstrap'; // Importing Bootstrap components
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importing Router components for navigation
-import './style.css'; // Custom CSS for styling
-import './App.css'; // Additional CSS for the App
+import React, { useState } from "react";
+import FlashcardList from "./FlashcardList"; // Importing the FlashcardList component
+import {
+  Container,
+  Navbar,
+  Nav,
+  Form,
+  FormControl,
+  Row,
+  Col,
+} from "react-bootstrap"; // Importing Bootstrap components
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Importing Router components for navigation
+import "./style.css"; // Custom CSS for styling
+import "./App.css"; // Additional CSS for the App
 
 function App() {
   // State to manage selected category for filtering flashcards
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState("");
 
   // Function to handle the change in category dropdown selection
   const handleCategoryChange = (event) => {
@@ -17,11 +25,13 @@ function App() {
   return (
     <Router>
       {/* Bootstrap container for layout */}
-      <Container className="mt-5">
+      <Container className="not-prose container">
         {/* Bootstrap Navbar */}
         <Navbar bg="light" expand="lg">
           {/* Navbar brand or title */}
-          <Navbar.Brand className='header-name' href="#">Flashcard</Navbar.Brand>
+          <Navbar.Brand href="#">
+            <b>edzest </b> flashcards
+          </Navbar.Brand>
 
           {/* Toggler button for mobile view */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,13 +54,19 @@ function App() {
                   <option value="Initiation">Initiation</option>
                   <option value="Planning">Planning</option>
                   <option value="Execution">Execution</option>
-                  <option value="Monitoring and controlling">Monitoring and controlling</option>
+                  <option value="Monitoring and controlling">
+                    Monitoring and controlling
+                  </option>
                   <option value="Closing">Closing</option>
-                  <option value="Agile principles and mindset">Agile principles and mindset</option>
+                  <option value="Agile principles and mindset">
+                    Agile principles and mindset
+                  </option>
                   <option value="Agile Methodology">Agile Methodology</option>
                   <option value="Agile Ceremonies">Agile Ceremonies</option>
                   <option value="Servant leadership">Servant leadership</option>
-                  <option value="Agile Tools & Techniques">Agile Tools & Techniques</option>
+                  <option value="Agile Tools & Techniques">
+                    Agile Tools & Techniques
+                  </option>
                 </FormControl>
               </Form>
             </Nav>

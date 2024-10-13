@@ -1,178 +1,80 @@
-* {
-  font-family: 'calibri', 'calibri', Calibri, 'calibri', calibri;
-}
-
 .flashcard-container {
-  perspective: 2000px;
-  max-height: 600px; /* Adjust for better responsiveness */
-  max-width: 750px;
-  margin-top: -160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 10px; /* Add padding to ensure content is not touching the edges */
+    perspective: 2000px;
+    max-height: 600px; /* Adjust for better responsiveness */
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px; /* Add padding to ensure content is not touching the edges */
+    margin-bottom: 1rem;
 }
 
 .flashcard {
-  width: 1000px; /* Keeping desktop size unchanged */
-  height: auto; /* Adjust height for mobile */
-  transition: transform 0.3s;
-  transform-style: preserve-3d;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 1000px; /* Keeping desktop size unchanged */
+    height: 200px;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flashcard-item {
+    height: 200px; /* Ensure all cards have the same height */
 }
 
 .flashcard.flipped {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.front, .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  padding: 20px;
+.flashcard .front {
+    cursor: pointer;
+}
+
+.front,
+.back {
+    border-radius: 0.25rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #7091b2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
 }
 
 .back {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flashcard-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flashcard-buttons {
+    margin-top: 0.5rem; /* Adjust the spacing between the flashcard and buttons */
 }
 
 .card-title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .card-text {
-  font-size: 1.5em;
-  text-align: center;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .card-img {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-/* Responsiveness for mobile screens */
-@media (max-width: 768px) {
-  .flashcard-container {
-    max-width: 100%; /* Allow flashcard to fit mobile screens */
-    width: 150%;
-    margin-top: 30%;
-  }
-
-  .flashcard {
-    width: 150%; /* Flashcard adjusts width on smaller screens */
-    height: auto;
-  }
-
-  .card-title {
-    font-size: 1.2em;
-  }
-
-  .card-text {
-    font-size: 1.4em;
-  }
-
-  .card-img {
-    width: 50px;
-  }
-}
-
-@media (max-width: 576px) {
-  .flashcard-container {
-    max-width: 100%; /* Full width on small devices */
-    height: 300%;
-    width: 150%;
-    margin-top: 30%;
-  }
- 
-  .card-title {
-    font-size: 1em;
-  }
-
-  .card-text {
-    font-size: 1.2em;
-  }
-
-  .card-img {
-    width: 40px;
-  }
-}
-
-/* For screens smaller than 576px (mobile view) */
-@media (max-width: 576px) {
-  .flashcard-container {
-    max-width: 100%; /* Increase the width to 90% of the viewport */
-    margin: 0 auto; /* Center the flashcard */
-    padding: 10px; /* Add some padding */
-  }
-
-  .flashcard {
-    width: 100%; /* Ensure the flashcard fills the container */
-    height: auto; /* Adjust the height based on content */
-  }
-}
-
-/* For medium screens (tablets) */
-@media (min-width: 577px) and (max-width: 768px) {
-  .flashcard-container {
-    max-width: 80%; /* Slightly reduce the width for tablets */
-  }
-}
-
-/* Mobile Landscape View Adjustments */
-@media (max-width: 768px) and (orientation: landscape) {
-  .flashcard-container {
-    width: 100%; /* Use full width for landscape */
-    height: auto;
-    margin-top: 10px; /* Ensure there's no negative margin causing overlap */
-    padding: 10px;
-  }
-
-  .flashcard {
-    width: 100%; /* Keep the flashcard width responsive */
-    height: auto; /* Adjust height based on content */
-  }
-
-  .card-title {
-    font-size: 1.3em; /* Adjust font size for readability in landscape */
-  }
-
-  .card-text {
-    font-size: 1.2em; /* Adjust card text size for landscape */
-  }
-
-  .card-img {
-    width: 60px; /* Scale down image size */
-  }
-}
-
-/* Remove hover and opacity effects for buttons */
-.btn, .btn-know, .btn-dont-know, .btn-prev-next {
-  transition: none; /* Remove any transition effects */
-  background-color: inherit; /* Ensure no color change on hover or active */
-  opacity: 5; /* Ensure opacity remains unchanged */
-}
-
-.btn:hover, .btn-know:hover, .btn-dont-know:hover, .btn-prev-next:hover {
-  background-color: inherit; /* No change in color on hover */
-  opacity: 5; /* Ensure opacity remains unchanged */
-}
-
-.btn:active, .btn-know:active, .btn-dont-know:active, .btn-prev-next:active {
-  background-color: inherit; /* No change in color when button is clicked */
-  opacity: 5; /* Ensure opacity remains unchanged */
+    width: 80px;
+    margin-bottom: 10px;
 }
