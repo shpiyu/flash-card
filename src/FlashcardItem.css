@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 10px; /* Add padding to ensure content is not touching the edges */
     margin-bottom: 1rem;
 }
 

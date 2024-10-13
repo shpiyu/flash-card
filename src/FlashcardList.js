@@ -3062,6 +3062,15 @@ const FlashcardList = ({ category }) => {
 
   return (
     <div>
+      <div>
+        <progress
+          className="progress progress-primary w-full"
+          value={score}
+          max={flashcards.length}
+        ></progress>
+        {score} / {flashcards.length}
+      </div>
+
       {currentFlashcards.map((flashcard, index) => (
         <div key={index}>
           <FlashcardItem
@@ -3087,14 +3096,6 @@ const FlashcardList = ({ category }) => {
         <button onClick={handleNextClick} className="btn">
           Next
         </button>
-      </div>
-
-      <div className="row">
-        <div className="col text-center margin-top-20">
-          <h4>
-            Your Score: {score} out of {flashcards.length}
-          </h4>
-        </div>
       </div>
 
       {/* Popup Component */}
