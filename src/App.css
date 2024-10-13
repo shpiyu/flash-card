@@ -1,342 +1,354 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  background: rgb(230, 231, 246);
+    background: rgb(230, 231, 246);
 }
 
 /* Container for full height */
 .container-full-height {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Navbar adjustments */
 .navv {
-  margin-left: auto;
-  margin-right: 20px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 /* Row styling */
 .row {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
 }
 
 /* Column styling */
 .col {
-  display: flex;
-  justify-content: center;
-  flex-basis: 100%;
-  max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 100%;
 }
 
 .col-md-8 {
-  flex: 0 0 66.666667%;
-  max-width: 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
 }
 
 .col-lg-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
 }
 
 /* Text alignment */
 .text-center {
-  text-align: center;
-  margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 /* Button container styling */
 .btn-container {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
-  justify-content: center;
-  padding-left: 0;
-  box-sizing: border-box;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+    box-sizing: border-box;
 }
 
 /* Button styling */
-.btn, .btn-know, .btn-dont-know, .btn-prev-next {
-  width: 150px; /* Fixed width for all buttons */
-  text-align: center; /* Center text within button */
-  padding: 10px; /* Adjust padding to fit text properly */
-  transition: none; /* Remove any transition effects */
+.btn,
+.btn-know,
+.btn-dont-know,
+.btn-prev-next {
+    width: 150px; /* Fixed width for all buttons */
+    text-align: center; /* Center text within button */
+    padding: 10px; /* Adjust padding to fit text properly */
+    transition: none; /* Remove any transition effects */
 }
 
 /* Default button styling */
 .btn {
-  padding: 20px 50px;
-  border: none;
-  color: black;
-  background-color: #009dff;
-  
+    padding: 20px 50px;
+    border: none;
+    color: black;
+    background-color: #009dff;
 }
 
 .btn-know {
-  background-color: rgb(120, 232, 120);
-  padding: 10px 20px;
-  border: none;
-  color: black;
-  
-  text-align: center;
-  white-space: nowrap;
+    background-color: rgb(120, 232, 120);
+    padding: 10px 20px;
+    border: none;
+    color: black;
+
+    text-align: center;
+    white-space: nowrap;
 }
 
 .btn-dont-know {
-  background-color: #eb7272;
-  padding: 10px 20px;
-  border: none;
-  color: #161515;
-  
-  text-align: center;
-  white-space: nowrap;
+    background-color: #eb7272;
+    padding: 10px 20px;
+    border: none;
+    color: #161515;
+
+    text-align: center;
+    white-space: nowrap;
 }
 
 .btn-prev-next {
-  background-color: #a4a5f4;
-  color: black;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  margin-left: 5px;
+    background-color: #a4a5f4;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
 }
 
 /* Remove hover and opacity effects for buttons */
-.btn:hover, .btn-know:hover, .btn-dont-know:hover, .btn-prev-next:hover {
-  background-color: #009dff; /* No change in color on hover */
-  opacity: 1; /* Ensure opacity remains unchanged */
+.btn:hover,
+.btn-know:hover,
+.btn-dont-know:hover,
+.btn-prev-next:hover {
+    background-color: #009dff; /* No change in color on hover */
+    opacity: 1; /* Ensure opacity remains unchanged */
 }
 
 /* Remove hover and opacity effects for buttons */
- .btn-prev-next:hover {
-  background-color: #4748ac; /* No change in color on hover */
-  opacity: 1; /* Ensure opacity remains unchanged */
+.btn-prev-next:hover {
+    background-color: #4748ac; /* No change in color on hover */
+    opacity: 1; /* Ensure opacity remains unchanged */
 }
 .btn-know:hover {
-  background-color: green; /* No change in color on hover */
-  opacity: 1; /* Ensure opacity remains unchanged */
+    background-color: green; /* No change in color on hover */
+    opacity: 1; /* Ensure opacity remains unchanged */
 }
 .btn-dont-know:hover {
-  background-color: red; /* No change in color on hover */
-  opacity: 1; /* Ensure opacity remains unchanged */
+    background-color: red; /* No change in color on hover */
+    opacity: 1; /* Ensure opacity remains unchanged */
 }
 
-
-.btn:active, .btn-know:active, .btn-dont-know:active, .btn-prev-next:active 
-{
-  background-color: #6062db; /* No change in color when button is clicked */
-  opacity: 1; /* Ensure opacity remains unchanged */
+.btn:active,
+.btn-know:active,
+.btn-dont-know:active,
+.btn-prev-next:active {
+    background-color: #6062db; /* No change in color when button is clicked */
+    opacity: 1; /* Ensure opacity remains unchanged */
 }
 
 /* Margin top */
 .margin-top-20 {
-  margin-top: 20px;
-  position: absolute;
-  top: 200px;
+    margin-top: 20px;
+    position: absolute;
+    top: 200px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .container-full-height {
-    height: auto;
-    padding: 20px;
-    margin-top: 0; /* Remove negative margin to prevent overlap */
-  }
+    .container-full-height {
+        height: auto;
+        padding: 20px;
+        margin-top: 0; /* Remove negative margin to prevent overlap */
+    }
 
-  h1, h4 {
-    margin-bottom: 20px; /* Add space below headers */
-  }
+    h1,
+    h4 {
+        margin-bottom: 20px; /* Add space below headers */
+    }
 
-  .col-md-8,
-  .col-lg-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+    .col-md-8,
+    .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
-  .btn-container {
-    gap: 10px;
-    padding-left: 0;
-    justify-content: center;
-  }
+    .btn-container {
+        gap: 10px;
+        padding-left: 0;
+        justify-content: center;
+    }
 
-  .btn {
-    padding: 12px 30px;
-    font-size: 14px;
-  }
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
 
-  .btn-prev-next {
-    margin: 5px;
-  }
+    .btn-prev-next {
+        margin: 5px;
+    }
 
-  .navbar {
-    padding: 10px 15px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
+    .navbar {
+        padding: 10px 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
 
-  .navv {
-    margin-left: 0;
-    margin-right: 0;
-    width: auto;
-  }
+    .navv {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
 
-  .flashcard-container {
-    width: 100%;
-    padding: 20px;
-    margin-top: 30px; /* Ensure space above the flashcard container */
-  }
+    .flashcard-container {
+        width: 100%;
+        padding: 20px;
+        margin-top: 30px; /* Ensure space above the flashcard container */
+    }
 
-  .flashcard {
-    width: 150%;
-    height: 150%; /* Adjust height to content */
-  }
+    .flashcard {
+        width: 150%;
+        height: 150%; /* Adjust height to content */
+    }
 }
 
 @media (max-width: 576px) {
-  .btn-container {
-    gap: 8px;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 70%;
-  }
+    .btn-container {
+        gap: 8px;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 70%;
+    }
 
-  .btn {
-    padding: 10px 25px;
-    font-size: 12px;
-  }
+    .btn {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
 
-  .btn-prev-next {
-    padding: 8px 10px;
-    font-size: 12px;
-  }
+    .btn-prev-next {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
 
-  .flashcard-container {
-    width: 100%;
-    padding: 10px;
-    margin-top: 30px; /* Increase space to ensure flashcard is below headers */
-  }
+    .flashcard-container {
+        width: 100%;
+        padding: 10px;
+        margin-top: 30px; /* Increase space to ensure flashcard is below headers */
+    }
 }
 
 /* Popup Overlay */
 .popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure it appears on top of other elements */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears on top of other elements */
 }
 
 /* Popup Content */
 .popup-content {
-  background: #fff; /* White background for the popup */
-  padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  text-align: center;
-  max-width: 90%; /* Responsive width */
-  width: 400px; /* Fixed width for larger screens */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  animation: fadeIn 0.3s; /* Fade-in animation */
+    background: #fff; /* White background for the popup */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    max-width: 90%; /* Responsive width */
+    width: 400px; /* Fixed width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: fadeIn 0.3s; /* Fade-in animation */
 }
 
 /* Close Button */
 .btn-popup-close {
-  background-color: hsl(107, 75%, 72%); /* Color for the close button */
-  color: white; /* White text color */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px; /* Space above the button */
+    background-color: hsl(107, 75%, 72%); /* Color for the close button */
+    color: white; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Space above the button */
 }
 
 /* Popup Animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
-  .popup-content {
-    width: 80%; /* Adjust width for smaller screens */
-  }
+    .popup-content {
+        width: 80%; /* Adjust width for smaller screens */
+    }
 }
 
 @media (min-width: 768px) and (max-width: 834px) {
-  /* Target iPad Mini specifically */
-  .flashcard-container {
-    min-height: 450px; /* Adjust this value as needed */
-    max-height: none;  /* Ensure no clipping of content */
-    padding-bottom: 20px; /* Add some padding to prevent overlap with buttons */
-  }
+    /* Target iPad Mini specifically */
+    .flashcard-container {
+        min-height: 450px; /* Adjust this value as needed */
+        max-height: none; /* Ensure no clipping of content */
+        padding-bottom: 20px; /* Add some padding to prevent overlap with buttons */
+    }
 
-  .flashcard {
-    height: 100%; /* Allow the flashcard to adjust based on content */
-  }
+    .flashcard {
+        height: 100%; /* Allow the flashcard to adjust based on content */
+    }
 
-  h4 {
-    margin-bottom: 30px; /* Ensure space between header and flashcard */
-  }
+    h4 {
+        margin-bottom: 30px; /* Ensure space between header and flashcard */
+    }
 
-  .btn-container {
-    margin-top: 20px; /* Maintain gap above buttons */
-  }
+    .btn-container {
+        margin-top: 20px; /* Maintain gap above buttons */
+    }
 }
 
 /* Button container styling */
 .button-container {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center;
-  gap: 16px; /* Add some spacing between elements */
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 16px; /* Add some spacing between elements */
 }
 
 /* Shift h4 below button container */
 h4 {
-  margin-top: 20px; /* Add margin to separate it from the buttons */
-  display: block; /* Ensure it is a block element and below the buttons */
-  text-align: center;
+    margin-top: 20px; /* Add margin to separate it from the buttons */
+    display: block; /* Ensure it is a block element and below the buttons */
+    text-align: center;
 }
 @media (max-width: 768px) and (orientation: landscape) {
-  h1, h4 {
-    margin-top: 20px; /* Ensure space between h1 and h4 to avoid overlap */
-    margin-bottom: 15px; /* Add space below headers */
-    font-size: 1.5em; /* Adjust font size for better visibility in landscape */
-  }
+    h1,
+    h4 {
+        margin-top: 20px; /* Ensure space between h1 and h4 to avoid overlap */
+        margin-bottom: 15px; /* Add space below headers */
+        font-size: 1.5em; /* Adjust font size for better visibility in landscape */
+    }
 
-  .container-full-height {
-    height: auto;
-    padding: 10px; /* Adjust padding to fit smaller landscape height */
-    margin-top: 0; /* Remove any top margin to prevent overlap */
-  }
+    .container-full-height {
+        height: auto;
+        padding: 10px; /* Adjust padding to fit smaller landscape height */
+        margin-top: 0; /* Remove any top margin to prevent overlap */
+    }
 
-  .flashcard-container {
-    margin-top: 20px; /* Ensure space between flashcards and header */
-    padding: 15px; /* Adjust padding for better fit */
-    width: 90%; /* Reduce width to fit landscape view */
-  }
+    .flashcard-container {
+        margin-top: 20px; /* Ensure space between flashcards and header */
+        padding: 15px; /* Adjust padding for better fit */
+        width: 90%; /* Reduce width to fit landscape view */
+    }
 
-  .flashcard {
-    height: auto; /* Allow flashcard height to adjust based on content */
-  }
+    .flashcard {
+        height: auto; /* Allow flashcard height to adjust based on content */
+    }
 }
